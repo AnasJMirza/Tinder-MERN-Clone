@@ -1,0 +1,32 @@
+.tinder-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tinder-card{
+    position: absolute;
+    top: 16vh;
+}
+
+.card-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image{
+    width: 80%;
+    /* border: 12px solid crimson; */
+    border-radius: 20px;
+    box-shadow : 0px 12px 14px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-text{
+    
+    position: absolute;
+    bottom: 0;
+    left: 5vw;
+    color: white;
+    font-family: poppins;
+}
