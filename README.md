@@ -9,5 +9,6 @@
     <li>React-JS</li>
     <li>Express-JS</li>
     <li>MongoDB</li>
+    <li>Heroku (Backend Hosting)</li>
     <li>Firebase (Hosting)</li>
 </ul>
