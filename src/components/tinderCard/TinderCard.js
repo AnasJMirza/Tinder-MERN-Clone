@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './TinderCard.css';
+import "./TinderCard.css";
 
 import TinderCardLib from "react-tinder-card";
 
@@ -7,33 +7,32 @@ const TinderCard = () => {
   const [person, setPerson] = useState([
     {
       name: "Anas",
-      url: "https://media-exp1.licdn.com/dms/image/C4D03AQFknxTOfWouqw/profile-displayphoto-shrink_200_200/0/1653245311482?e=1665014400&v=beta&t=C1Db-Oqd4XuX7dVTDjanDBJBO2aVeeEJPKzS0tFkxdM",
+      url: "https://avatars.githubusercontent.com/u/90819686?v=4",
     },
     {
       name: "Junaid",
       url: "https://i1.sndcdn.com/avatars-000646633104-4k5sh0-t500x500.jpg",
     },
     {
-      name: "Imran",
-      url: "https://i1.sndcdn.com/avatars-000646633104-4k5sh0-t500x500.jpg",
+      name: "Livian",
+      url: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
     },
   ]);
   return (
-    <div>
-      {person.map((person) => {
-        return (
-          <div className="tinder-card-container">
-            <TinderCardLib className="tinder-card" key={person.name}>
-              <div className="card-image-container">
-                <img src={person.url} alt="cardImage" className="card-image"/>
-              </div>
-              <div className="card-text">
-                <h3>{person.name}</h3>
-              </div>
-            </TinderCardLib>
-          </div>
-        );
-      })}
+    <div className="tinder-card-container">
+      
+        {person.map((person) => {
+          return <TinderCardLib
+            className="tinder-card"
+            key={person.name}
+            preventSwipe={["up", "down"]} 
+          >
+            <div className="card" style={{backgroundImage: `url('${person.url}')`}}>
+                <h3 className="tinder-card-name"> { person.name } </h3>
+            </div>
+          </TinderCardLib>;
+        })}
+      
     </div>
   );
 };
